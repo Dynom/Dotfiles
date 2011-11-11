@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+#
+#
+# Figure out what to check against. If it's our first first commit,
+# it can't be "HEAD"
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+    AGAINST=HEAD
+else
+    AGAINST=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+fi
+
+
+# Call PHP lint on all PHP files, staged for commit, so we're certain no
+# parse-errors will be committed.
+git diff-index --cached --name-only $AGAINST | grep -E '\.(php|phtml)$' | while read FILE;
+do
+    php -l $FILE 2>/dev/null 1>/dev/null || echo "Lint violation for file: ${FILE}, commit rejected." && exit 1;
+done
