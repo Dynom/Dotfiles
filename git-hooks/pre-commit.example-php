@@ -18,3 +18,5 @@ git diff-index --cached --name-only $AGAINST | grep -E '\.(php|phtml)$' | while 
 do
     php -l $FILE 2>/dev/null 1>/dev/null || echo "Lint violation for file: ${FILE}, commit rejected." && exit 1;
 done
+
+exit 0
