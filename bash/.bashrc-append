@@ -1,0 +1,21 @@
+# Prompt config
+PS1="\n[\w]\$(declare -F __git_ps1 &>/dev/null && __git_ps1 \" (%s)\")\n\u@\h:$ "
+
+# GIT prompt config
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWSTASHSTATE=true
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+
+    alias l='ls -halF'
+fi
+
+# Grep config
+export GREP_COLOR="1;33"
