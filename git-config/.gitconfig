@@ -1,0 +1,16 @@
+[user]
+	name = Mark van der Velden
+[color]
+	diff = auto
+	status = auto
+    branch = auto
+[core]
+    editor = vim
+[merge]
+    tool = vimdiff
+[alias]
+	st = status -sb
+	revert = checkout
+    plog = log --oneline --graph --decorate
+
+    
