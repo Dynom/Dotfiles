@@ -9,6 +9,7 @@
 [merge]
   tool = vimdiff
   ff = no
+  commit = no # A reset --hard HEAD^ works too..
 [alias]
 	st = status -sb
 	revert = checkout
