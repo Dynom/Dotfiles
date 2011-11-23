@@ -3,14 +3,15 @@
 [color]
 	diff = auto
 	status = auto
-    branch = auto
+  branch = auto
 [core]
-    editor = vim
+  editor = vim
 [merge]
-    tool = vimdiff
+  tool = vimdiff
+  ff = no
 [alias]
 	st = status -sb
 	revert = checkout
-    plog = log --oneline --graph --decorate
+  plog = log --oneline --graph --decorate
 
     
