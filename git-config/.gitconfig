@@ -1,8 +1,8 @@
 [user]
-	name = Mark van der Velden
+  name = Mark van der Velden
 [color]
-	diff = auto
-	status = auto
+  diff = auto
+  status = auto
   branch = auto
 [core]
   editor = vim
@@ -11,8 +11,6 @@
   ff = no
   commit = no # A reset --hard HEAD^ works too..
 [alias]
-	st = status -sb
-	revert = checkout
+  st = status -sb
+  revert = checkout
   plog = log --oneline --graph --decorate
-
-    
