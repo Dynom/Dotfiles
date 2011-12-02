@@ -4,12 +4,20 @@
   diff = auto
   status = auto
   branch = auto
+  grep = auto
 [core]
   editor = vim
+  preloadindex = true
+[branch]
+  autosetupmerge = true
+[http]
+  postBuffer = 5 MiB
 [merge]
   tool = vimdiff
-  ff = no
-  commit = no # A reset --hard HEAD^ works too..
+    ff = no
+[rerere]
+  autoupdate = true
+  enabled = true
 [alias]
   st = status -sb
   revert = checkout
