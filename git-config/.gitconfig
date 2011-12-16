@@ -22,3 +22,4 @@
   st = status -sb
   revert = checkout
   plog = log --oneline --graph --decorate
+  rank = shortlog -sn --no-merges
