@@ -14,7 +14,7 @@
   postBuffer = 5 MiB
 [merge]
   tool = vimdiff
-    ff = no
+  ff = no
 [rerere]
   autoupdate = true
   enabled = true
