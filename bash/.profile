@@ -21,6 +21,7 @@ complete -A hostname rsh rcp telnet rlogin r ftp ping disk ssh
 
 # Some aliases
 alias l='ls -halF'
+alias grep='grep --color'
 
 # Grep config
 export GREP_COLOR="1;33"
