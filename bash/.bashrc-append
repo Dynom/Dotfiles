@@ -14,7 +14,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 
-    alias l='ls -halF'
+    alias l='ls -vqhAlF'
 fi
 
 # Grep config
