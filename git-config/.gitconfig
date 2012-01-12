@@ -14,7 +14,7 @@
   postBuffer = 5 MiB
 [merge]
   tool = vimdiff
-    ff = no
+  ff = no
 [rerere]
   autoupdate = true
   enabled = true
@@ -22,3 +22,4 @@
   st = status -sb
   revert = checkout
   plog = log --oneline --graph --decorate
+  rank = shortlog -sn --no-merges

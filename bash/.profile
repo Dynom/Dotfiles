@@ -6,20 +6,25 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWSTASHSTATE=true
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+# Setting some shell vars
+export CLICOLOR=1
+export TERM=xterm-color
+export LSCOLORS=ExFxCxDxBxegedabagacad
+export EDITOR=vim
+export LC_CTYPE=en_US.UTF-8
 
-    alias l='ls -vqhAlF'
-fi
+# Smart auto-complete
+set show-all-if-ambiguous On
+bind "set completion-ignore-case on"
+
+complete -A hostname rsh rcp telnet rlogin r ftp ping disk ssh
+
+# Some aliases
+alias l='ls -halF'
+alias grep='grep --color'
 
 # Grep config
 export GREP_COLOR="1;33"
-
 
 # Fixing something very broken...
 ssh-reagent () {
