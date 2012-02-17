@@ -18,8 +18,11 @@
 [rerere]
   autoupdate = true
   enabled = true
+[push]
+  default = upstream
 [alias]
   st = status -sb
   revert = checkout
-  plog = log --oneline --graph --decorate
+  plog = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
+  tlog = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
   rank = shortlog -sn --no-merges
