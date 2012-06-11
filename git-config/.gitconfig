@@ -20,7 +20,7 @@
   autoupdate = true
   enabled = true
 [push]
-  default = upstream
+  default = current
 [alias]
   st = status -sb
   revert = checkout
