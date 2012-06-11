@@ -1,10 +1,13 @@
-# Prompt config
-PS1="\n[\w]\$(declare -F __git_ps1 &>/dev/null && __git_ps1 \" (%s)\")\n\u@\h:$ "
+
+source /usr/local/git/contrib/completion/git-completion.bash
 
 # GIT prompt config
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWUNTRACKEDFILES=true
-export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWDIRTYSTATE=false
+export GIT_PS1_SHOWUNTRACKEDFILES=false
+export GIT_PS1_SHOWSTASHSTATE=false
+
+# Prompt config
+PS1="\n[\w]\$(declare -F __git_ps1 &>/dev/null && __git_ps1 \" (%s)\")\n\u@\h:$ "
 
 # Setting some shell vars
 export CLICOLOR=1
