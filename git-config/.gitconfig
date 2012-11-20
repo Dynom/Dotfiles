@@ -12,7 +12,7 @@
 [branch]
   autosetupmerge = true
 [http]
-  postBuffer = 5 MiB
+  postBuffer = 524288000
 [merge]
   tool = vimdiff
   ff = no
