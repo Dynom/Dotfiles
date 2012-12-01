@@ -24,6 +24,6 @@
 [alias]
   st = status -sb
   revert = checkout
-  plog = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
+  plog = log --graph --all --format=format:'%C(yellow)%h %C(green)%ar %C(reset)%s %C(bold blue)[%an]%C(red)%d'
   tlog = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
   rank = shortlog -sn --no-merges
