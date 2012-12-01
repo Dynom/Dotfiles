@@ -14,8 +14,8 @@
 [http]
   postBuffer = 524288000
 [merge]
-  tool = vimdiff
-  ff = no
+  tool = vimdiff ; On MacOS opendiff works nice too.
+  ff = false
 [rerere]
   autoupdate = true
   enabled = true
