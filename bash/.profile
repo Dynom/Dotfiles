@@ -1,3 +1,5 @@
+PATH=/usr/local/bin:$PATH
+
 
 source /usr/local/git/contrib/completion/git-completion.bash
 
