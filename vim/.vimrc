@@ -136,7 +136,7 @@ inoremap <silent><C-Right> <C-o>:cal search('\<\<Bar>\U\@<=\u\<Bar>\u\ze\%(\U\&\
 
 set fileformat=unix
 set t_Co=256
-color 256-grayvim 
+color 256-grayvim
 
 if getline(1) == '\<\?php'
   set ft=php
