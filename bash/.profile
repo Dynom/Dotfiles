@@ -1,7 +1,6 @@
-PATH=/usr/local/bin:$PATH
+PATH=/usr/local/bin:/usr/local/Cellar/ruby/1.9.3-p362/bin:/usr/local/share/npm/bin/:$PATH
 
 
-source /usr/local/git/contrib/completion/git-completion.bash
 
 # GIT prompt config
 export GIT_PS1_SHOWDIRTYSTATE=false
@@ -23,6 +22,18 @@ set show-all-if-ambiguous On
 bind "set completion-ignore-case on"
 
 complete -A hostname rsh rcp telnet rlogin r ftp ping disk ssh
+
+# Bash autocomplete
+if [ -f $(brew --prefix)/share/bash-completion/completions ];
+then
+    . $(brew --prefix)/share/bash-completion/completions
+fi
+
+# Git autocomplete
+if [ -f /usr/local/git/contrib/completion/git-completion.bash ];
+then
+    . /usr/local/git/contrib/completion/git-completion.bash
+fi
 
 # Some aliases
 alias l='ls -halF'
