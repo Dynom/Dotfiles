@@ -2,3 +2,6 @@ atlassian-ide-plugin.xml
 composer.phar
 .DS_Store
 .idea
+php-cs-fixer.phar
+phploc.phar
+phpunit.xml
