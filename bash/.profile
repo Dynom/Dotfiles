@@ -38,6 +38,8 @@ fi
 # Some aliases
 alias l='ls -halF'
 alias grep='grep --color'
+# Binary Archive Rsync, defaults to some optimised settings for archiving binary files
+alias barsync='rsync -a --whole-file --progress --no-owner --no-group --no-perms'
 
 # Grep config
 export GREP_COLOR="1;33"
