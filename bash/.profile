@@ -55,4 +55,21 @@ ssh-reagent () {
              fi
      done
      echo Cannot find ssh agent - maybe you should reconnect and forward it?
+ }
+
+docker-set-host () {
+    PORT=2375
+    HOST=127.0.0.1
+
+    if [ ! -z "$1" ];
+    then
+        PORT=$1
+    fi
+
+    export DOCKER_HOST=tcp://$HOST:$PORT
+    echo Set host to $HOST on port $PORT.
 }
+
+
+
+
