@@ -74,6 +74,6 @@ docker-set-host () {
     echo Set host to $HOST on port $PORT.
 }
 
-
+docker-set-host 1>/dev/null
 
 
