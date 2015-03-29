@@ -66,6 +66,10 @@ docker-set-host () {
         PORT=$1
     fi
 
+    case $PORT in
+        ''|*[!0-9]*) echo "Expected a portnumber as argument, or no argument at all."; return ;;
+    esac
+
     export DOCKER_HOST=tcp://$HOST:$PORT
     echo Set host to $HOST on port $PORT.
 }
