@@ -9,6 +9,7 @@
   editor = vim
   preloadindex = true
   excludesfile = ~/.gitignore_global
+  ignorecase = false
 [branch]
   autosetupmerge = true
 [http]
@@ -21,10 +22,22 @@
   enabled = true
 [push]
   default = current
+[pull]
+  default = current
+[diff]
+  indentHeuristic = true
+  noprefix = true
 [alias]
   st = status -sb
   revert = checkout
   plog = log --graph --all --format=format:'%C(yellow)%h %C(green)%ar %C(reset)%s %C(bold blue)[%an]%C(red)%d'
   tlog = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+  slog = log --no-walk --tags --pretty="%h %d %s"
   rank = shortlog -sn --no-merges
   wmerge = merge -Xignore-all-space
+  tl =  tag -n1
+[tag]
+  ; Make sure that sorting doesn't happen on tag-name, but on ref, works better with semver
+  sort = version:refname
+[url "git@github.com:"]
+  insteadOf = https://github.com/
