@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+ROOT_DIR="$(pwd)"
+while [ ! -d "${ROOT_DIR}/.git" ]; do
+
+    ROOT_DIR="$(dirname ${ROOT_DIR})"
+    if [ "x${ROOT_DIR}" == "x/" ]; then
+        echo "Cannot find .git directory, I use that as reference for the commands."
+        exit 1
+    fi
+done
+
+echo "Running the checks in ${ROOT_DIR}..."
+# go get is triggering a rebuilding of pkg.a, see: https://github.com/golang/go/issues/12703
+go get && \
+    go build && \
+    gometalinter --fast -t \
+        -D dupl -D errcheck -D gotype \
+        --vendor \
+        --cyclo-over=10 \
+        --deadline=5m \
+        --enable=testify \
+        --enable=test \
+        --enable=gofmt \
+        --enable=unused \
+        -e "should have comment" \
+        ${ROOT_DIR}/... || exit $?
+
+go test -short $(go list ./... | grep -v vendor) || exit $?
